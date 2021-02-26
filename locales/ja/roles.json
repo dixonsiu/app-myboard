@@ -1,14 +1,6 @@
 {
-    "MyBoardOwner": {
-        "DisplayName": "オーナー",
-        "Description": "オーナーは、全ての権限を持つユーザーです。"
-    },
-    "MyBoardEditor": {
-        "DisplayName": "エディター",
-        "Description": "エディターは、書き込みと読む権限を持つユーザーです。"
-    },
-    "MyBoardViewer": {
+    "MyWorkViewer": {
         "DisplayName": "ビューア",
-        "Description": "ビューアはボードを見ることができるだけです。"
+        "Description": "ビューアは仕事履歴を見ることができるだけです。"
     }
 }

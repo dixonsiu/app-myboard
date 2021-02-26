@@ -2,7 +2,7 @@ var mb = {};
 
 mb.msgData = null;
 
-const APP_URL = "https://app-myboard.demo.personium.io/";
+const APP_URL = "https://app-mywork.demo-eu.personium.io/";
 
 getProtectedBoxAccessToken4ExtCellEngineEndPoint = function() {
     return Common.getAppCellUrl() + "__/html/Engine/getProtectedBoxAccessToken4ExtCell";
@@ -21,7 +21,7 @@ getNamesapces = function() {
 };
 
 getAppDataPath = function() {
-    return 'MyBoardBox/my-board.json';
+    return 'experiences/note.json';
 };
 
 /*
@@ -44,7 +44,7 @@ getAppRequestInfo = function() {
 getAppRole = function(auth) {
     if (auth == "read") {
         // Currently we only allow role with read permission.
-        return 'MyBoardViewer';
+        return 'MyWorkViewer';
     }
 };
 
@@ -52,13 +52,13 @@ getAuthorityAppRole = function(auth) {
     let result = auth;
     switch (auth) {
         case "owner":
-            result = "MyBoardOwner";
+            result = "MyWorkOwner";
             break;
         case "editor":
-            result = "MyBoardEditor";
+            result = "MyWorkEditor";
             break;
         case "viewer":
-            result = "MyBoardViewer";
+            result = "MyWorkViewer";
             break;
     }
 
@@ -68,13 +68,13 @@ getAuthorityAppRole = function(auth) {
 getAppRoleAuthority = function(roleName) {
     let result = roleName;
     switch (roleName) {
-        case "MyBoardOwner":
+        case "MyWorkOwner":
             result = "owner";
             break;
-        case "MyBoardEditor":
+        case "MyWorkEditor":
             result = "editor";
             break;
-        case "MyBoardViewer":
+        case "MyWorkViewer":
             result = "viewer";
             break;
     }
@@ -84,13 +84,13 @@ getAppRoleAuthority = function(roleName) {
 getAppRoleAuthorityName = function(roleName) {
     let result = roleName;
     switch (roleName) {
-        case "MyBoardOwner":
+        case "MyWorkOwner":
             result = i18next.t("Authority.owner");
             break;
-        case "MyBoardEditor":
+        case "MyWorkEditor":
             result = i18next.t("Authority.editor");
             break;
-        case "MyBoardViewer":
+        case "MyWorkViewer":
             result = i18next.t("Authority.viewer");
             break;
     }
@@ -264,7 +264,7 @@ mb.registerMyBoardAPI = function(locked, message) {
     };
     return $.ajax({
         type: "PUT",
-        url: Common.getBoxUrl() + 'MyBoardBox/my-board.json',
+        url: Common.getBoxUrl() + getAppDataPath(),
         data: JSON.stringify(json),
         dataType: 'json',
         headers: {

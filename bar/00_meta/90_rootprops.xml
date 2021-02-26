@@ -3,75 +3,65 @@
         <href>personium-localbox:/</href>
         <propstat>
             <prop>
-                <creationdate>2019-02-27T01:34:39.833+0000</creationdate>
-                <getlastmodified>Wed, 27 Feb 2019 01:34:39 GMT</getlastmodified>
+                <creationdate>2019-04-22T08:30:10.007+0000</creationdate>
+                <getlastmodified>Mon, 22 Apr 2019 08:30:10 GMT</getlastmodified>
                 <resourcetype>
                     <collection/>
                 </resourcetype>
-                <acl xml:base="https://app-myboard.demo.personium.io/__role/app/" xmlns:p="urn:x-personium:xmlns"/>
+                <acl xml:base="https://app-mywork.demo-eu.personium.io/__role/app/" xmlns:p="urn:x-personium:xmlns"/>
             </prop>
             <status>HTTP/1.1 200 OK</status>
         </propstat>
     </response>
     <response>
-        <href>personium-localbox:/MyBoardBox</href>
+        <href>personium-localbox:/experiences</href>
         <propstat>
             <prop>
-                <creationdate>2019-02-27T01:34:40.081+0000</creationdate>
-                <getlastmodified>Wed, 27 Feb 2019 01:34:40 GMT</getlastmodified>
+                <creationdate>2021-02-26T05:43:53.709+0000</creationdate>
+                <getlastmodified>Fri, 26 Feb 2021 05:43:53 GMT</getlastmodified>
                 <resourcetype>
                     <collection/>
                 </resourcetype>
-                <acl xml:base="https://app-myboard.demo.personium.io/__role/app/" xmlns:p="urn:x-personium:xmlns">
+                <acl xml:base="https://app-mywork.demo-eu.personium.io/__role/app/" xmlns:p="urn:x-personium:xmlns">
                     <ace>
                         <principal>
-                            <href>MyBoardOwner</href>
-                        </principal>
-                        <grant>
-                            <privilege>
-                                <D:all xmlns:D="DAV:"/>
-                            </privilege>
-                        </grant>
-                    </ace>
-                    <ace>
-                        <principal>
-                            <href>MyBoardViewer</href>
+                            <href>MyWorkViewer</href>
                         </principal>
                         <grant>
                             <privilege>
                                 <D:read xmlns:D="DAV:"/>
-                            </privilege>
-                        </grant>
-                    </ace>
-                    <ace>
-                        <principal>
-                            <href>MyBoardEditor</href>
-                        </principal>
-                        <grant>
-                            <privilege>
-                                <D:read xmlns:D="DAV:"/>
-                            </privilege>
-                            <privilege>
-                                <D:write xmlns:D="DAV:"/>
                             </privilege>
                         </grant>
                     </ace>
                 </acl>
-                <dc:my-board.json xmlns:p="urn:x-personium:xmlns" xmlns:D="DAV:" xmlns:Z="http://www.w3.com/standards/z39.50/" xmlns:dc="urn:x-dc1:xmlns">my-board.json</dc:my-board.json>
             </prop>
             <status>HTTP/1.1 200 OK</status>
         </propstat>
     </response>
     <response>
-        <href>personium-localbox:/MyBoardBox/my-board.json</href>
+        <href>personium-localbox:/experiences/note.json</href>
         <propstat>
             <prop>
-                <creationdate>2019-02-27T01:34:40.216+0000</creationdate>
+                <creationdate>2021-02-26T05:44:05.110+0000</creationdate>
                 <getcontentlength>31</getcontentlength>
-                <getcontenttype>text/plan</getcontenttype>
-                <getlastmodified>Wed, 27 Feb 2019 01:34:40 GMT</getlastmodified>
+                <getcontenttype>application/json</getcontenttype>
+                <getlastmodified>Fri, 26 Feb 2021 05:44:05 GMT</getlastmodified>
                 <resourcetype/>
-                <acl xml:base="https://app-myboard.demo.personium.io/__role/app/" xmlns:p="urn:x-personium:xmlns"/>
+                <acl xml:base="https://app-mywork.demo-eu.personium.io/__role/app/" xmlns:p="urn:x-personium:xmlns">
+                    <ace>
+                        <principal>
+                            <href>MyWorkViewer</href>
+                        </principal>
+                        <grant>
+                            <privilege>
+                                <D:read xmlns:D="DAV:"/>
+                            </privilege>
+                        </grant>
+                        <inherited>
+                            <href>https://app-mywork.demo-eu.personium.io/app/experiences</href>
+                        </inherited>
+                    </ace>
+                </acl>
             </prop>
             <status>HTTP/1.1 200 OK</status>
         </propstat>

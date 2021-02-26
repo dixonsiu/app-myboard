@@ -1,9 +1,9 @@
 {
-    "title": "Personium MyBoard",
-    "label": "MyBoard",
+    "title": "Personium MyWork",
+    "label": "MyWork",
     "board": {
-        "Mine": "Own board ({{name}})",
-        "Yours": "Another user's board ({{name}})"
+        "Mine": "Own experiences ({{name}})",
+        "Yours": "Another user's experiences ({{name}})"
     },
     "modalDialog": {
         "updateMyBoard": {
@@ -15,21 +15,21 @@
     },
     "sessionExpiredDialog": {
         "title": "Session Expired",
-        "action": "MyBoard will be terminated.",
+        "action": "MyWork will be terminated.",
         "btnOk": "OK"
     },
     "irrecoverableErrorDialog": {
-        "title": "Terminating MyBoard ..."
+        "title": "Terminating MyWork ..."
     },
-    "readRequestTarget": "MyBoard",
-    "readRequestBodyTarget": "board (MyBoard)",
+    "readRequestTarget": "MyWork",
+    "readRequestBodyTarget": "experiences (MyWork)",
     "msg": {
         "info": {
             "writeSomething": "Write something."
         },
         "error": {
-            "noWritePermission": "No write permission for this board.",
-            "failedToWrite": "Failed to write to this board."
+            "noWritePermission": "No write permission for this note.",
+            "failedToWrite": "Failed to write to this note."
         }
     }
 }
